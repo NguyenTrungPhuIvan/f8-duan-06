@@ -1,0 +1,39 @@
+@use "../abstracts" as ab;
+
+.header {
+    .container {
+        max-width: 1330px;
+    }
+    padding-top: 58px;
+    &__row {
+        @include ab.flexCenter($j: space-between);
+        position: relative;
+    }
+
+    &__mail {
+        @include ab.flexCenter($j: null);
+        column-gap: 10px;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.36;
+        text-decoration-line: underline;
+
+        &-link {
+            color: ab.$text-primary-color;
+        }
+    }
+    &__logo {
+        position: absolute;
+        @include ab.alignCenter;
+        width: 100px;
+        img {
+            width: 100%;
+        }
+    }
+}
+.nav {
+    &__list {
+        @include ab.flexCenter;
+        column-gap: 43px;
+    }
+}
