@@ -1,10 +1,13 @@
 @use "../abstracts" as ab;
 
 .header {
+    position: relative;
+    z-index: 99;
+    background: #fbfaff;
+    padding-top: 58px;
     .container {
         max-width: 1330px;
     }
-    padding-top: 58px;
     &__row {
         @include ab.flexCenter($j: space-between);
         position: relative;
@@ -20,6 +23,10 @@
 
         &-link {
             color: ab.$text-primary-color;
+            &:hover {
+                cursor: pointer;
+                opacity: 0.7;
+            }
         }
     }
     &__logo {
@@ -35,5 +42,10 @@
     &__list {
         @include ab.flexCenter;
         column-gap: 43px;
+    }
+    &__item {
+        a:hover {
+            opacity: 0.7;
+        }
     }
 }

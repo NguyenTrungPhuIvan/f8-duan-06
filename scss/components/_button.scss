@@ -4,7 +4,32 @@
     @include ab.flexCenter();
     width: 170px;
     height: 62px;
+
+    font-size: 1.8re;
+    font-weight: 700;
+    line-height: 1.66;
+
     &-color-1 {
+        background: #5d3bee;
+        color: ab.$text-third-color;
+        transition: background 0.3s, color 0.3s, outline 0.3s;
+        &:hover {
+            cursor: pointer;
+            background: ab.$text-third-color;
+            color: #5d3bee;
+            outline: 1px solid #5d3bee;
+        }
+    }
+    &-color-2 {
+        background: ab.$text-white-color;
+        color: ab.$text-primary-color;
+        transition: background 0.3s, color 0.3s, outline 0.3s;
+        &:hover {
+            cursor: pointer;
+            background: ab.$text-primary-color;
+            color: ab.$text-white-color;
+            outline: 1px solid ab.$text-primary-color;
+        }
     }
 }
 .btn-circle {
@@ -12,6 +37,10 @@
     width: 46px;
     height: 46px;
     border-radius: 50%;
-
     border: 1px solid rgba($color: ab.$primary-color, $alpha: 0.4);
+    transition: background 0.3s;
+    &:hover {
+        cursor: pointer;
+        background: rgba($color: ab.$primary-color, $alpha: 0.4);
+    }
 }

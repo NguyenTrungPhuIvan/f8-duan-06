@@ -1,0 +1,77 @@
+@use "../abstracts" as ab;
+.hero {
+    position: relative;
+    padding-top: 80px;
+    background: #fbfaff;
+    &__row {
+        column-gap: 156px;
+        flex-wrap: nowrap;
+    }
+    &__left {
+        flex: 1;
+    }
+    &__img {
+        position: relative;
+        z-index: 2;
+    }
+    &__right {
+        flex: 1;
+        padding-top: 137px;
+    }
+    &__desc {
+        width: 370px;
+        margin-top: 20px;
+    }
+    &__CTA {
+        margin-top: 50px;
+        @include ab.flexCenter($j: null);
+        column-gap: 30px;
+    }
+    &__link {
+        color: ab.$text-primary-color;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.66;
+        text-decoration-line: underline;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__follow {
+        @include ab.flexCenter($j: null);
+        column-gap: 15px;
+        margin-top: 104px;
+        .text {
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+        &-icons {
+            @include ab.flexCenter($j: null);
+            column-gap: 20px;
+        }
+        &-icon {
+            @include ab.flexCenter;
+            color: ab.$text-primary-color;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: background 0.3s;
+            border: 1px solid rgba($color: #080415, $alpha: 0.1);
+            &:hover {
+                background: rgba($color: #080415, $alpha: 0.1);
+            }
+        }
+    }
+}
+.deco {
+    &:nth-of-type(1) {
+        z-index: 1;
+        left: 10%;
+        bottom: 0;
+    }
+    &:nth-of-type(2) {
+        right: 0;
+        bottom: 0;
+    }
+}
