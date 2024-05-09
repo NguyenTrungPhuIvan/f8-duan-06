@@ -5,8 +5,10 @@
     background: ab.$primary-color;
     padding-top: 86px;
     padding-bottom: 86px;
+
     &__row {
         @include ab.flexCenter($j: null);
+
         margin-bottom: 40px;
     }
     &__title {

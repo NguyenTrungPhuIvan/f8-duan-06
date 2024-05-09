@@ -36,10 +36,10 @@
     width: 46px;
     height: 46px;
     border-radius: 50%;
-    border: 1px solid rgba($color: ab.$primary-color, $alpha: 0.4);
+    border: 1px solid rgba($color: ab.$primary-color, $alpha: 0.3);
     transition: background 0.3s;
     &:hover {
         cursor: pointer;
-        background: rgba($color: ab.$primary-color, $alpha: 0.4);
+        background: rgba($color: ab.$primary-color, $alpha: 0.3);
     }
 }

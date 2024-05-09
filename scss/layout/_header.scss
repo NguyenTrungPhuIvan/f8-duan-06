@@ -5,12 +5,19 @@
     z-index: 99;
     background: #fbfaff;
     padding-top: 58px;
+    @include ab.responsive("tm") {
+        padding-top: 40px;
+    }
     .container {
         max-width: 1330px;
     }
     &__row {
         @include ab.flexCenter($j: space-between);
         position: relative;
+
+        @include ab.responsive("tm") {
+            justify-content: flex-end;
+        }
     }
 
     &__mail {
@@ -27,6 +34,16 @@
                 cursor: pointer;
                 opacity: 0.7;
             }
+            @include ab.responsive("tm") {
+                display: none;
+            }
+        }
+
+        .bars {
+            display: none;
+            @include ab.responsive("tm") {
+                display: block;
+            }
         }
     }
     &__logo {
@@ -35,6 +52,10 @@
         width: 100px;
         img {
             width: 100%;
+        }
+
+        @include ab.responsive("tm") {
+            display: block;
         }
     }
 }
@@ -47,5 +68,9 @@
         a:hover {
             opacity: 0.7;
         }
+    }
+
+    @include ab.responsive("tm") {
+        display: none;
     }
 }

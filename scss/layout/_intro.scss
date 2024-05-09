@@ -17,7 +17,8 @@
     }
 
     &__row {
-        @include ab.flexCenter($j: space-around);
+        @include ab.flexCenter($j: space-evenly);
+
         @include ab.marginCenter;
         width: 946px;
         margin-top: 70px;
@@ -46,7 +47,9 @@
             }
         }
     }
-
+    &__video-wrap {
+        width: 100%;
+    }
     &__video {
         margin-top: 70px;
         background: linear-gradient(180deg, #fff 50%, #fbfaff 50%);

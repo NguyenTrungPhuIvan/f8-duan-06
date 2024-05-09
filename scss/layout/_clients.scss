@@ -9,6 +9,8 @@
         position: relative;
         margin-left: 102px;
         font-size: 4.2rem;
+        font-weight: 600;
+        opacity: 0.9;
         line-height: 1.2;
         width: 253px;
 
@@ -38,6 +40,8 @@
         a {
             @include ab.flexCenter($j: null);
             column-gap: 12px;
+            color: ab.$text-primary-color;
+            font-weight: 700;
         }
 
         &:hover {

@@ -37,6 +37,7 @@ $gutters: (
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    @extend %gutter-padding;
 }
 
 .container {
@@ -59,6 +60,11 @@ $gutters: (
     > * {
         margin-top: var(--grid-gutter-y);
     }
+}
+.row-2 {
+    @extend .row;
+    margin-left: calc(var(--grid-gutter-x) * 0.5 * -2);
+    margin-right: calc(var(--grid-gutter-x) * 0.5 * -2);
 }
 
 .col {

@@ -2,7 +2,10 @@
 .book {
     margin-top: 140px;
     text-align: center;
-
+    .container {
+        width: 1330px;
+        max-width: 1330px;
+    }
     &__main {
         padding: 68px 0;
         position: relative;
