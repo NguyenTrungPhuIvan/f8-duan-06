@@ -1,0 +1,42 @@
+@use "../abstracts" as ab;
+.footer {
+    margin-top: 50px;
+    &__copy {
+        opacity: 0.6;
+        margin-top: 32px;
+        border-top: 1px solid rgba($color: ab.$text-primary-color, $alpha: 0.2);
+        .container {
+            padding: 18px 130px 30px;
+        }
+        .row {
+            justify-content: space-between;
+        }
+
+        &-row {
+            a {
+                display: inline-block;
+                padding: 0 23px;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+            .policy {
+                position: relative;
+                @debug &;
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 14px;
+                    background: ab.$text-secondary-color;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}

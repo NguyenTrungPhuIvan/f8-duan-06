@@ -8,10 +8,14 @@ const itemQuestion = document.querySelector(".question__item");
 
 const btnQuestios = document.querySelectorAll(".question__item-btn");
 const itemQuestions = document.querySelectorAll(".question__item");
+// footer
+const header = document.querySelector(".header");
+const footer = document.querySelector(".footer__main");
 
 const run = (() => {
     playVideo();
     showContent();
+    copyHeader();
 })();
 
 function playVideo() {
@@ -44,4 +48,8 @@ function showContent() {
             item.classList.add("active");
         };
     });
+}
+
+function copyHeader() {
+    footer.innerHTML = header.innerHTML;
 }

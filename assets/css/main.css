@@ -425,6 +425,43 @@ img {
   opacity: 0.7;
 }
 
+.footer {
+  margin-top: 50px;
+}
+.footer__copy {
+  opacity: 0.6;
+  margin-top: 32px;
+  border-top: 1px solid rgba(8, 4, 21, 0.2);
+}
+.footer__copy .container {
+  padding: 18px 130px 30px;
+}
+.footer__copy .row {
+  justify-content: space-between;
+}
+.footer__copy-row a {
+  display: inline-block;
+  padding: 0 23px;
+}
+.footer__copy-row a:hover {
+  opacity: 0.7;
+}
+.footer__copy-row .policy {
+  position: relative;
+}
+.footer__copy-row .policy::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  background: #51586a;
+  opacity: 0.6;
+}
+
 .header {
   position: relative;
   z-index: 99;
