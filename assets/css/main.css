@@ -316,6 +316,32 @@ img {
   display: block;
 }
 
+.asmosphere {
+  margin-top: 160px;
+  text-align: center;
+}
+.asmosphere__desc {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 528px;
+}
+.asmosphere__link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #5d3bee;
+  font-size: 3.2rem;
+  font-weight: 500;
+  text-decoration-line: underline;
+}
+.asmosphere__row {
+  margin-top: 70px;
+}
+.asmosphere__row img {
+  height: 529px;
+  width: 100%;
+}
+
 .clients {
   margin-top: 100px;
 }

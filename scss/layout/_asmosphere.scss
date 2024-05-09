@@ -1,0 +1,27 @@
+@use "../abstracts" as ab;
+
+.asmosphere {
+    margin-top: 160px;
+    text-align: center;
+    &__desc {
+        @include ab.marginCenter;
+        margin-top: 20px;
+        width: 528px;
+    }
+    &__link {
+        display: inline-block;
+        margin-top: 30px;
+        color: #5d3bee;
+        font-size: 3.2rem;
+        font-weight: 500;
+        text-decoration-line: underline;
+    }
+    &__row {
+        margin-top: 70px;
+
+        img {
+            height: 529px;
+            width: 100%;
+        }
+    }
+}
