@@ -1,0 +1,95 @@
+@use "../abstracts" as ab;
+
+.intro {
+    margin-top: 140px;
+    text-align: center;
+    &__sub-title {
+        color: ab.$primary-color;
+    }
+
+    &__title {
+        margin-top: 10px;
+    }
+    &__desc {
+        margin: 0 auto;
+        margin-top: 15px;
+        width: 570px;
+    }
+
+    &__row {
+        @include ab.flexCenter($j: space-around);
+        @include ab.marginCenter;
+        width: 946px;
+        margin-top: 70px;
+        padding: 20px 0;
+        border: 1px solid rgba($color: ab.$text-primary-color, $alpha: 0.2);
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+
+    &__item {
+        @include ab.flexCenter($a: flex-start);
+        flex-flow: column;
+        row-gap: 10px;
+
+        &-title {
+            color: ab.$text-primary-color;
+            font-size: 5.6rem;
+            font-weight: 500;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 3px;
+                background: ab.$text-primary-color;
+            }
+        }
+    }
+
+    &__video {
+        margin-top: 70px;
+        background: linear-gradient(180deg, #fff 50%, #fbfaff 50%);
+        &-wrap {
+            position: relative;
+        }
+
+        video {
+            object-fit: cover;
+        }
+        &-play {
+            @include ab.flexCenter;
+            @include ab.alignCenter;
+            width: 111px;
+            height: 111px;
+            border-radius: 50%;
+            background: ab.$text-white-color;
+            opacity: 0.7;
+            svg {
+                color: ab.$primary-color;
+            }
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.6;
+            }
+        }
+
+        &-card {
+            @include ab.flexCenter;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            width: 170px;
+            height: 62px;
+            font-weight: 700;
+            background: ab.$text-white-color;
+            text-transform: uppercase;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.6;
+            }
+        }
+    }
+}

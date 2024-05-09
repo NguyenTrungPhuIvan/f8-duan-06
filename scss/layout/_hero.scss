@@ -27,11 +27,6 @@
         @include ab.flexCenter($j: null);
         column-gap: 30px;
     }
-    &__link {
-        &:hover {
-            opacity: 0.7;
-        }
-    }
 
     &__follow {
         @include ab.flexCenter($j: null);
@@ -58,15 +53,15 @@
             }
         }
     }
-}
-.deco {
-    &:nth-of-type(1) {
-        z-index: 1;
-        left: 10%;
-        bottom: 0;
-    }
-    &:nth-of-type(2) {
-        right: 0;
-        bottom: 0;
+    &__deco {
+        &:nth-of-type(1) {
+            z-index: 1;
+            left: 10%;
+            bottom: 0;
+        }
+        &:nth-of-type(2) {
+            right: 0;
+            bottom: 0;
+        }
     }
 }

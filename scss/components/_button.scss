@@ -16,8 +16,8 @@
         &:hover {
             cursor: pointer;
             background: ab.$text-third-color;
-            color: #5d3bee;
-            outline: 2px solid #5d3bee;
+            color: ab.$primary-color;
+            border: 2px solid ab.$primary-color;
         }
     }
     &-color-2 {
@@ -28,7 +28,6 @@
             cursor: pointer;
             background: ab.$text-primary-color;
             color: ab.$text-white-color;
-            outline: 2px solid ab.$text-primary-color;
         }
     }
 }

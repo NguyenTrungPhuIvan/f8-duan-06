@@ -9,3 +9,7 @@
     top: $y;
     transform: translateX(-$x) translateY(-$y);
 }
+@mixin marginCenter {
+    margin-left: auto;
+    margin-right: auto;
+}
