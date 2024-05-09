@@ -1,0 +1,64 @@
+@use "../abstracts" as ab;
+.testimonial {
+    background: #fbfaff;
+    padding-top: 150px;
+    padding-bottom: 74px;
+    text-align: center;
+    position: relative;
+
+    &__main {
+        @include ab.flexCenter;
+        flex-flow: column;
+    }
+    &__desc {
+        margin-top: 20px;
+        width: 570px;
+    }
+
+    &__blockquote {
+        font-size: 2.4rem;
+        margin-top: 60px;
+        width: 679px;
+    }
+
+    &__author {
+        margin-top: 36px;
+        margin-bottom: 40px;
+        @include ab.flexCenter;
+        row-gap: 10px;
+        flex-flow: column;
+
+        .row {
+            align-items: center;
+            column-gap: 15px;
+        }
+        &-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f29764;
+            overflow: hidden;
+            position: relative;
+            img {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+        &-name {
+            color: ab.$text-primary-color;
+            font-size: 3rem;
+            font-weight: 500;
+        }
+    }
+    &__deco {
+        &:nth-of-type(1) {
+            bottom: 0;
+            left: 0;
+        }
+        &:nth-of-type(2) {
+            bottom: 0;
+            right: 0;
+        }
+    }
+}

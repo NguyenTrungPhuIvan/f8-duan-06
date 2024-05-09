@@ -1,0 +1,47 @@
+@use "../abstracts" as ab;
+.balls_bullets {
+    @include ab.flexCenter;
+
+    column-gap: 16px;
+    .buttlet {
+        position: relative;
+        width: 16px;
+        height: 16px;
+
+        &::before {
+            @include ab.alignCenter;
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            background: transparent;
+            border: 1px solid ab.$primary-color;
+            display: none;
+        }
+
+        &::after {
+            @include ab.alignCenter;
+            position: absolute;
+            content: "";
+            display: block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #cbc9d0;
+        }
+    }
+    .active.buttlet::after {
+        @debug &;
+        position: absolute;
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: ab.$primary-color;
+    }
+    .active.buttlet::before {
+        display: block;
+    }
+}
