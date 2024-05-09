@@ -1,0 +1,63 @@
+@use "../abstracts" as ab;
+
+.question {
+    margin-top: 95px;
+
+    .rotate90 {
+        rotate: 90deg;
+        left: 32%;
+        position: absolute;
+        display: none;
+    }
+
+    &__title {
+        width: 575px;
+    }
+
+    &__item {
+        @include ab.flexCenter($j: space-between);
+        padding: 60px 0 33px 22px;
+        border-bottom: 2px solid ab.$text-primary-color;
+        position: relative;
+
+        &-desc {
+            margin-top: 23px;
+            width: 487px;
+            display: none;
+        }
+        &-btn {
+            @include ab.flexCenter;
+            position: relative;
+            color: #161a1c;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid rgba($color: ab.$text-primary-color, $alpha: 0.2);
+            &:hover {
+                cursor: pointer;
+                background: rgba($color: ab.$primary-color, $alpha: 0.2);
+                color: ab.$primary-color;
+                border-color: rgba($color: ab.$primary-color, $alpha: 0.4);
+            }
+        }
+
+        &.active {
+            .question__item-title {
+                color: ab.$primary-color;
+            }
+            border-color: ab.$primary-color;
+            .question__item-btn {
+                color: ab.$primary-color;
+                border-color: rgba($color: ab.$primary-color, $alpha: 0.4);
+            }
+
+            .rotate90 {
+                display: block;
+            }
+            .question__item-desc {
+                margin-top: 23px;
+                display: block;
+            }
+        }
+    }
+}
