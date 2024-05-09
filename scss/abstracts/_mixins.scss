@@ -3,9 +3,9 @@
     align-items: $a;
     justify-content: $j;
 }
-@mixin alignCenter() {
+@mixin alignCenter($x: 50%, $y: 50%) {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: $x;
+    top: $y;
+    transform: translateX(-$x) translateY(-$y);
 }

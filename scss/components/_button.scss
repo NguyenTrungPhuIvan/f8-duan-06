@@ -12,12 +12,12 @@
     &-color-1 {
         background: #5d3bee;
         color: ab.$text-third-color;
-        transition: background 0.3s, color 0.3s, outline 0.3s;
+        transition: background 0.3s, color 0.3s;
         &:hover {
             cursor: pointer;
             background: ab.$text-third-color;
             color: #5d3bee;
-            outline: 1px solid #5d3bee;
+            outline: 2px solid #5d3bee;
         }
     }
     &-color-2 {
@@ -28,7 +28,7 @@
             cursor: pointer;
             background: ab.$text-primary-color;
             color: ab.$text-white-color;
-            outline: 1px solid ab.$text-primary-color;
+            outline: 2px solid ab.$text-primary-color;
         }
     }
 }

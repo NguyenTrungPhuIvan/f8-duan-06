@@ -185,13 +185,13 @@ img {
 .btn-color-1 {
   background: #5d3bee;
   color: #fdfdfd;
-  transition: background 0.3s, color 0.3s, outline 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 .btn-color-1:hover {
   cursor: pointer;
   background: #fdfdfd;
   color: #5d3bee;
-  outline: 1px solid #5d3bee;
+  outline: 2px solid #5d3bee;
 }
 .btn-color-2 {
   background: #fff;
@@ -202,7 +202,7 @@ img {
   cursor: pointer;
   background: #080415;
   color: #fff;
-  outline: 1px solid #080415;
+  outline: 2px solid #080415;
 }
 
 .btn-circle {
@@ -253,6 +253,48 @@ img {
   position: absolute;
 }
 
+.clients {
+  margin-top: 100px;
+}
+.clients__row {
+  column-gap: 105px;
+}
+.clients__title {
+  position: relative;
+  margin-left: 102px;
+  font-size: 4.2rem;
+  line-height: 1.2;
+  width: 225px;
+}
+.clients__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -102px;
+  top: 25%;
+  width: 86px;
+  height: 2px;
+  background: #5d3bee;
+}
+.clients__icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 26px;
+  column-gap: 36px;
+  align-items: center;
+}
+.clients__icon {
+  transition: opacity 0.3s;
+}
+.clients__icon a {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+.clients__icon:hover {
+  opacity: 0.7;
+}
+
 .header {
   position: relative;
   z-index: 99;
@@ -289,7 +331,7 @@ img {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%) translateY(-50%);
   width: 100px;
 }
 .header__logo img {

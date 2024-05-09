@@ -1,0 +1,47 @@
+@use "../abstracts" as ab;
+
+.clients {
+    margin-top: 100px;
+    &__row {
+        column-gap: 105px;
+    }
+    &__title {
+        position: relative;
+        margin-left: 102px;
+        font-size: 4.2rem;
+        line-height: 1.2;
+        width: 225px;
+
+        &::before {
+            content: "";
+            display: block;
+
+            position: absolute;
+            left: -102px;
+            top: 25%;
+            width: 86px;
+            height: 2px;
+            background: ab.$primary-color;
+        }
+    }
+    &__icons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 26px;
+        column-gap: 36px;
+        align-items: center;
+    }
+
+    &__icon {
+        transition: opacity 0.3s;
+
+        a {
+            @include ab.flexCenter($j: null);
+            column-gap: 12px;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
