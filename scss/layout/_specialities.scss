@@ -1,0 +1,41 @@
+@use "../abstracts" as ab;
+.specialities {
+    margin-top: 133px;
+    text-align: center;
+
+    &__desc {
+        margin: 20px auto 0;
+        width: 534px;
+    }
+
+    &__item {
+        margin-top: 60px;
+        text-align: left;
+        padding: 33px 43px;
+        background: #fbfaff;
+        transition: box-shadow 0.3s;
+        &-icon {
+            @include ab.flexCenter();
+            width: 74px;
+            height: 74px;
+            border-radius: 50%;
+            border: 1px solid rgba($color: ab.$text-primary-color, $alpha: 0.05);
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            }
+        }
+        &-title {
+            margin-top: 22px;
+        }
+        &-desc {
+            margin-top: 15px;
+        }
+
+        &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+    }
+}

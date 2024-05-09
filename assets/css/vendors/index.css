@@ -1,5 +1,5 @@
 .col, .row[class*=row-cols-] > *,
-.row [class*=col-], .container-fluid, .container {
+.row [class*=col-] {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
 }

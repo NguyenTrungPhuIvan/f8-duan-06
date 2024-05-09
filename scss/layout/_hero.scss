@@ -28,11 +28,6 @@
         column-gap: 30px;
     }
     &__link {
-        color: ab.$text-primary-color;
-        font-size: 1.8rem;
-        font-weight: 700;
-        line-height: 1.66;
-        text-decoration-line: underline;
         &:hover {
             opacity: 0.7;
         }

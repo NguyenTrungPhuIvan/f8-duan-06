@@ -1,0 +1,54 @@
+@use "../abstracts" as ab;
+
+.projects {
+    margin-top: 140px;
+    background: ab.$primary-color;
+    padding-top: 86px;
+    padding-bottom: 86px;
+    &__row {
+        @include ab.flexCenter($j: null);
+        margin-bottom: 40px;
+    }
+    &__title {
+        width: 468px;
+        color: ab.$text-white-color;
+    }
+    &__desc {
+        margin-left: 160px;
+        width: 370px;
+        opacity: 0.6;
+        color: ab.$text-white-color;
+    }
+
+    &__item {
+        @include ab.flexCenter($j: null);
+        background: #fbfaff;
+        padding: 24px 24px 24px 34px;
+        position: relative;
+
+        &-content,
+        &-img {
+            z-index: 1;
+        }
+
+        &-desc {
+            margin-top: 10px;
+        }
+        &-link {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        &-deco {
+            z-index: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.7;
+        }
+    }
+
+    &__btn {
+        @include ab.flexCenter;
+        margin-top: 50px;
+    }
+}
