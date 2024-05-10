@@ -1,0 +1,33 @@
+@use "../abstracts" as ab;
+
+.slider-show {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10px;
+
+    .balls_bullets {
+        display: none;
+        @include ab.responsive("tm") {
+            display: flex;
+        }
+    }
+
+    &__list {
+        transition: transform 0.4s;
+        width: 100%;
+        @include ab.responsive("m") {
+            &.row,
+            &.row-2 {
+                @include ab.marginCenter;
+            }
+        }
+    }
+
+    &__item {
+    }
+    &__list,
+    .row,
+    .row-2 {
+        flex-wrap: nowrap;
+    }
+}

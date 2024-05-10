@@ -12,6 +12,9 @@
 
     &__title {
         width: 575px;
+        @include ab.responsive("m") {
+            width: 100%;
+        }
     }
 
     &__item {
@@ -20,11 +23,18 @@
         border-bottom: 2px solid ab.$text-primary-color;
         position: relative;
         width: 1009px;
-
+        &-content {
+            @include ab.responsive("tm") {
+                width: 80%;
+            }
+        }
         &-desc {
             margin-top: 23px;
             width: 487px;
             display: none;
+            @include ab.responsive("tm") {
+                width: 100%;
+            }
         }
         &-btn {
             @include ab.flexCenter;
@@ -59,6 +69,9 @@
                 margin-top: 23px;
                 display: block;
             }
+        }
+        @include ab.responsive("tm") {
+            width: 100%;
         }
     }
 }

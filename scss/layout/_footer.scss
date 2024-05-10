@@ -1,17 +1,47 @@
 @use "../abstracts" as ab;
 .footer {
     margin-top: 50px;
+    &__main {
+        @include ab.responsive("tm") {
+            display: none;
+        }
+    }
     &__copy {
         opacity: 0.6;
         margin-top: 32px;
-        border-top: 1px solid rgba($color: ab.$text-primary-color, $alpha: 0.2);
         .container {
+            width: 1429px;
+            max-width: 1429px;
+            border-top: 1px solid
+                rgba($color: ab.$text-primary-color, $alpha: 0.2);
             padding: 18px 130px 30px;
+
+            @include ab.responsive("tm") {
+                padding-left: 0;
+                padding-right: 0;
+                width: 100%;
+                max-width: 100%;
+                border: none;
+            }
+            @include ab.responsive("m") {
+                width: 100%;
+                max-width: 100%;
+                border: none;
+            }
         }
         .row {
             justify-content: space-between;
+            @include ab.responsive("tm") {
+                align-items: center;
+                flex-flow: column;
+                row-gap: 40px;
+            }
         }
-
+        .text {
+            @include ab.responsive("tm") {
+                order: 3;
+            }
+        }
         &-row {
             a {
                 display: inline-block;
@@ -23,7 +53,7 @@
             }
             .policy {
                 position: relative;
-                @debug &;
+
                 &::after {
                     content: "";
                     display: block;
@@ -37,6 +67,39 @@
                     opacity: 0.6;
                 }
             }
+            @include ab.responsive("tm") {
+                order: 1;
+            }
         }
+    }
+
+    &__separate {
+        height: 1px;
+        width: 100vw;
+        background: rgba($color: ab.$text-primary-color, $alpha: 0.2);
+        display: none;
+        @include ab.responsive("tm") {
+            display: block;
+            order: 2;
+        }
+    }
+}
+.footer-tm {
+    margin-top: 120px;
+    display: none;
+    text-align: center;
+
+    @include ab.responsive("tm") {
+        display: block;
+    }
+    .footer_mail {
+        margin-top: 58px;
+        @include ab.flexCenter;
+        column-gap: 10px;
+        font-size: 22px;
+        text-decoration: underline;
+    }
+    .bars {
+        display: none;
     }
 }

@@ -7,6 +7,9 @@
         @include ab.marginCenter;
         margin-top: 20px;
         width: 528px;
+        @include ab.responsive("tm") {
+            width: 80%;
+        }
     }
     &__link {
         display: inline-block;

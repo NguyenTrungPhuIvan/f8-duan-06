@@ -5,6 +5,13 @@
     .container {
         width: 1330px;
         max-width: 1330px;
+        @include ab.responsive("tm") {
+            width: 100%;
+            max-width: 100%;
+        }
+        @include ab.responsive("tm") {
+            text-align: center;
+        }
     }
     &__main {
         padding: 68px 0;
@@ -19,6 +26,9 @@
         width: 570px;
         margin-top: 20px;
         @include ab.marginCenter;
+        @include ab.responsive("tm") {
+            width: 80%;
+        }
     }
     &__btn {
         margin-top: 39px;
@@ -29,6 +39,9 @@
         &:nth-of-type(2) {
             bottom: 0;
             left: 0;
+            @include ab.responsive("tm") {
+                display: none;
+            }
         }
         &:nth-of-type(3) {
             top: 0;
@@ -38,6 +51,9 @@
         &:nth-of-type(4) {
             top: 0;
             right: 0;
+            @include ab.responsive("tm") {
+                display: none;
+            }
         }
     }
 }

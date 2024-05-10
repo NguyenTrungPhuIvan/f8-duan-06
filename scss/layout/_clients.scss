@@ -4,6 +4,12 @@
     margin-top: 100px;
     &__row {
         column-gap: 105px;
+        @include ab.responsive("tm") {
+            text-align: center;
+            flex-flow: column;
+            row-gap: 40px;
+            align-items: center;
+        }
     }
     &__title {
         position: relative;
@@ -13,7 +19,9 @@
         opacity: 0.9;
         line-height: 1.2;
         width: 253px;
-
+        @include ab.responsive("tm") {
+            @include ab.marginCenter;
+        }
         &::before {
             content: "";
             display: block;
@@ -24,6 +32,11 @@
             width: 86px;
             height: 2px;
             background: ab.$primary-color;
+            @include ab.responsive("tm") {
+                top: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     }
     &__icons {
@@ -32,6 +45,9 @@
         row-gap: 26px;
         column-gap: 36px;
         align-items: center;
+        @include ab.responsive("m") {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
     &__icon {

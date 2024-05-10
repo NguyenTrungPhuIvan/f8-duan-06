@@ -10,6 +10,11 @@
     }
     .container {
         max-width: 1330px;
+        @include ab.responsive("tm") {
+            border-bottom: 1px solid
+                rgba($color: ab.$text-primary-color, $alpha: 0.2);
+            padding-bottom: 20px;
+        }
     }
     &__row {
         @include ab.flexCenter($j: space-between);
@@ -34,15 +39,17 @@
                 cursor: pointer;
                 opacity: 0.7;
             }
-            @include ab.responsive("tm") {
-                display: none;
+            .header & {
+                @include ab.responsive("tm") {
+                    display: none;
+                }
             }
         }
 
         .bars {
             display: none;
             @include ab.responsive("tm") {
-                display: block;
+                display: flex;
             }
         }
     }
@@ -55,6 +62,7 @@
         }
 
         @include ab.responsive("tm") {
+            left: 5%;
             display: block;
         }
     }
@@ -70,7 +78,9 @@
         }
     }
 
-    @include ab.responsive("tm") {
-        display: none;
+    &.nav-lg {
+        @include ab.responsive("tm") {
+            display: none;
+        }
     }
 }

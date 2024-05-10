@@ -14,6 +14,9 @@
         margin: 0 auto;
         margin-top: 15px;
         width: 570px;
+        @include ab.responsive("m") {
+            width: 100%;
+        }
     }
 
     &__row {
@@ -26,18 +29,27 @@
         border: 1px solid rgba($color: ab.$text-primary-color, $alpha: 0.2);
         border-left-color: transparent;
         border-right-color: transparent;
+        @include ab.responsive("tm") {
+            width: 100%;
+        }
     }
 
     &__item {
         @include ab.flexCenter($a: flex-start);
         flex-flow: column;
         row-gap: 10px;
-
+        @include ab.responsive("m") {
+            text-align: left;
+            width: 74px;
+        }
         &-title {
             color: ab.$text-primary-color;
             font-size: 5.6rem;
             font-weight: 500;
-
+            @include ab.responsive("m") {
+                font-size: 30px;
+                line-height: 1.4;
+            }
             &::after {
                 content: "";
                 display: block;
@@ -49,6 +61,10 @@
     }
     &__video-wrap {
         width: 100%;
+        @include ab.responsive("m") {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
     &__video {
         margin-top: 70px;

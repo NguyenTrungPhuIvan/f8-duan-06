@@ -2,6 +2,7 @@
 .balls_bullets {
     @include ab.flexCenter;
 
+    margin-top: 10px;
     column-gap: 16px;
     .buttlet {
         position: relative;
@@ -33,7 +34,6 @@
         }
     }
     .active.buttlet::after {
-        @debug &;
         position: absolute;
         content: "";
         display: block;
