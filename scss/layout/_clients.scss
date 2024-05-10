@@ -3,7 +3,7 @@
 .clients {
     margin-top: 100px;
     &__row {
-        column-gap: 105px;
+        justify-content: space-between;
         @include ab.responsive("tm") {
             text-align: center;
             flex-flow: column;

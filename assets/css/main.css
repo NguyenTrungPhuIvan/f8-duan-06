@@ -512,7 +512,7 @@ img {
   margin-top: 100px;
 }
 .clients__row {
-  column-gap: 105px;
+  justify-content: space-between;
 }
 @media (max-width: 991.98px) {
   .clients__row {
