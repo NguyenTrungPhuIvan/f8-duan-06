@@ -59,8 +59,11 @@ function copy() {
 
     const headerLink = document.querySelector(".header__mail");
     const footerLink = document.querySelector(".footer_mail");
-
     footerLink.innerHTML = headerLink.innerHTML;
+
+    const nav = document.querySelector(".nav");
+    const barsNav = document.querySelector(".bars-bg-nav");
+    barsNav.innerHTML = nav.innerHTML;
 }
 
 function SliderShow(element) {

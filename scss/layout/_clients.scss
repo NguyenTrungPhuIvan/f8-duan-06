@@ -21,6 +21,7 @@
         width: 253px;
         @include ab.responsive("tm") {
             @include ab.marginCenter;
+            width: 70%;
         }
         &::before {
             content: "";

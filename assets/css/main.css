@@ -216,7 +216,7 @@ img {
 }
 .btn-circle:hover {
   cursor: pointer;
-  background: rgba(93, 59, 238, 0.3);
+  opacity: 0.7;
 }
 
 .text {
@@ -535,6 +535,7 @@ img {
   .clients__title {
     margin-left: auto;
     margin-right: auto;
+    width: 70%;
   }
 }
 .clients__title::before {
@@ -609,7 +610,7 @@ img {
 }
 @media (max-width: 767.98px) {
   .footer__copy .container {
-    width: 100%;
+    width: 90%;
     max-width: 100%;
     border: none;
   }
@@ -751,6 +752,44 @@ img {
   .header__mail .bars {
     display: flex;
   }
+}
+.header__mail #bars-checkbox {
+  display: none;
+}
+.header__mail .opacity {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.4s;
+  opacity: 0;
+  visibility: hidden;
+}
+.header__mail .bars-bg {
+  padding: 60px;
+  position: fixed;
+  inset: 0 25% 0 0;
+  z-index: 30;
+  background: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.4s;
+}
+@media (max-width: 991.98px) {
+  .header__mail .bars-bg {
+    padding: 30px;
+  }
+}
+.header__mail .bars-bg .nav__list {
+  flex-flow: column;
+  align-items: flex-start;
+  row-gap: 20px;
+}
+.header__mail #bars-checkbox:checked ~ .opacity {
+  opacity: 1;
+  visibility: visible;
+}
+.header__mail #bars-checkbox:checked ~ .bars-bg {
+  transform: translateX(0%);
 }
 .header__logo {
   position: absolute;
